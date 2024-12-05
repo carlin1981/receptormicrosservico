@@ -34,3 +34,16 @@ VALUES
 ('A Última Ceia', 'Leonardo da Vinci', 1498, 'Cena bíblica do momento em que Jesus anuncia a traição.', 400000000.00, 0, 'Renascimento'),
 ('A Liberdade Guiando o Povo', 'Eugène Delacroix', 1830, 'Símbolo do romantismo e da revolução francesa.', 120000000.00, 1, 'Romantismo'),
 ('Noite de Verão', 'Edvard Munch', 1890, 'Paisagem expressionista com reflexos na água.', 50000000.00, 1, 'Expressionismo');
+
+-- Criação da tabela 'usuario'
+CREATE TABLE IF NOT EXISTS usuario (
+    usuario_id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_nome VARCHAR(100) NOT NULL,
+    usuario_sobrenome VARCHAR(100) NOT NULL,
+    usuario_cpf VARCHAR(11) NOT NULL UNIQUE,
+    usuario_email VARCHAR(100) NOT NULL UNIQUE,
+    usuario_senha VARCHAR(100) NOT NULL,
+    usuario_endereco VARCHAR(255) NOT NULL,
+    usuario_telefone VARCHAR(15) NOT NULL,
+    usuario_status INT NOT NULL
+);
